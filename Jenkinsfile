@@ -1,10 +1,10 @@
 pipeline {
-agent {label 'node1'}
+agent any
 environment {
-    PROJECT_ID = 'circle-ci-demo-343616'
+    PROJECT_ID = 'triple-poetry-351115'
     CLUSTER_NAME = 'cluster-1'
     LOCATION = 'us-central1-c'
-    CREDENTIALS_ID = 'circle-ci-demo'
+    CREDENTIALS_ID = 'service-account'
 }
 
 stages {
@@ -16,7 +16,7 @@ stages {
     stage('Build image') {
         steps {
             script {
-                app = docker.build("beknazar007/to_do_image:${env.BUILD_ID}")
+                app = docker.build("nurzada/to_do_image:${env.BUILD_ID}")
                 }
         }
     }
