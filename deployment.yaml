@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: todo
-        image: beknazar007/to_do_image:latest
+        image: nurzada/to_do_image:latest
         ports:
         - containerPort: 80
 ---
